@@ -1,15 +1,59 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #444;
+}
+@media only screen and (min-width: 600px) {
+    
+    #aplayer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .mobile{
+        display: none;
+    }
 }
 
-div {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    width: 100%;
-    background-color: #444;
-    color: wheat;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 36px;
-}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: #333333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile{
+        position: absolute;
+        top: 30vh;
+        text-align: center;
+        color: wheat;
+    }
+    #aplayer{
+        display: none;
+    }
+  }
