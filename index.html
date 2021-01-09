@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha512-CIYsJUa3pr1eoXlZFroEI0mq0UIMUqNouNinjpCkSWo3Bx5NRlQ0OuC6DtEB/bDqUWnzXc1gs2X/g52l36N5iw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="APlayer.min.css">
+    <title>ZIK</title>
 </head>
 <body>
-    <div>
-        <h1>Music Makes You Lose Control.</h1>
-    </div>
+    <h1 class="mobile">Apologies.<br>The service is currently browser only.</h1>
+
+
+
+<div id="aplayer"></div>
+<script src="APlayer.min.js"></script>
+<script>
+    const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    mini: false,
+    autoplay: false,
+    theme: '#333',
+    loop: 'all',
+    order: 'random',
+    preload: 'auto',
+    volume: 1,
+    mutex: true,
+    listFolded: false,
+    listMaxHeight: 90,
+    lrcType: 6,
+    audio: [{
+        name: 'dHall',
+        artist: 'Zik',
+        url: './resources/music/dHall.mp3',
+        cover: './resources/imgs/example.png'
+    }]
+});
+</script>
 </body>
 </html>
