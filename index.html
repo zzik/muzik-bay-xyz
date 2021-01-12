@@ -1,42 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ==" crossorigin="anonymous"></script>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--aPlayer.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha512-CIYsJUa3pr1eoXlZFroEI0mq0UIMUqNouNinjpCkSWo3Bx5NRlQ0OuC6DtEB/bDqUWnzXc1gs2X/g52l36N5iw==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="APlayer.min.css">
-    <title>ZIK</title>
-</head>
-<body>
-    <h1 class="mobile">Apologies.<br>The service is currently browser only.</h1>
+    <link rel="stylesheet" href="./style.css">
+    <title>muZIKbay</title>
+  </head>
+  <body>
+    
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>All tracks</h3>
+                </div>
+                <div class="col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="0">
+                        <img src="./resources/imgs/1.JPG" alt="">
+                    </a>
+                    <h4>lore</h4>
+                    <p>loremip</p>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="1">
+                        <img src="./resources/imgs/2.jpg" alt="">
+                    </a>
+                    <h4>lore</h4>
+                    <p>loremip</p>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="2">
+                        <img src="./resources/imgs/3.jpg" alt="">
+                    </a>
+                    <h4>lore</h4>
+                    <p>loremip</p>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="3">
+                        <img src="./resources/imgs/4.jpg" alt="">
+                    </a>
+                    <h4>lore</h4>
+                    <p>loremip</p>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="4">
+                        <img src="./resources/imgs/5.JPG" alt="">
+                    </a>
+                    <h4>lore</h4>
+                    <p>loremip</p>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="javascript:void();" class="album-poster" data-switch="5">
+                        <img src="./resources/imgs/6.jpg" alt="">
+                    </a>
+                    <h4>lore</h4>
+                    <p>loremip</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="aplayer"></div>
 
 
 
-<div id="aplayer"></div>
-<script src="APlayer.min.js"></script>
-<script>
-    const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    mini: false,
-    autoplay: false,
-    theme: '#333',
-    loop: 'all',
-    order: 'random',
-    preload: 'auto',
-    volume: 1,
-    mutex: true,
-    listFolded: false,
-    listMaxHeight: 90,
-    lrcType: 6,
-    audio: [{
-        name: 'dHall',
-        artist: 'Zik',
-        url: './resources/music/dHall.mp3',
-        cover: './resources/imgs/example.png'
-    }]
+
+
+    <!-- aPlayer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ==" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- the player-->
+    <script>
+
+        $(".album-poster").on('click', function(e){
+            var dataSwitchId = $(this).attr('data-switch');
+            ap.list.switch(dataSwitchId)
+            ap.play()
+            $("#aplayer").addClass("showPlayer");
+        });
+
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            listFolded: true,
+            audio: 
+    [
+            {
+                name: 'dHall',
+                artist: 'Zik',
+                url: 'resources/music/dHall.mp3',
+                cover: 'resources/imgs/1.jpg'
+            },
+            {
+                name: 'Oriental',
+                artist: 'Zik',
+                url: 'resources/music/Oriental.mp3',
+                cover: 'resources/imgs/2.jpg'
+            },
+            {
+                name: 'Chilly',
+                artist: 'Zik',
+                url: 'resources/music/Chilly.mp3',
+                cover: 'resources/imgs/3.jpg'
+            },
+            {
+                name: 'Packed',
+                artist: 'Zik',
+                url: 'resources/music/Packed.mp3',
+                cover: 'resources/imgs/4.jpg'
+            },
+            {
+                name: 'Man-Made',
+                artist: 'Zik',
+                url: 'resources/music/Man-Made.mp3',
+                cover: 'resources/imgs/5.jpg'
+            },
+            {
+                name: 'Dawn',
+                artist: 'Zik',
+                url: 'resources/music/Dawn.mp3',
+                cover: 'resources/imgs/6.jpg'
+            }
+    ]
 });
-</script>
-</body>
+    </script>
+  </body>
 </html>
